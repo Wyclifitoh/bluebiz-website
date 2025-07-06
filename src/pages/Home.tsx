@@ -295,7 +295,7 @@ const Home = () => {
                     <h3 className="text-2xl font-bold text-dark-grey mb-4 group-hover:text-primary-orange transition-colors">
                       {stage.title}
                     </h3>
-                    <p className="text-dark-grey/70 mb-6 leading-relaxed">{stage.description}</p>
+                    {/* <p className="text-dark-grey/70 mb-6 leading-relaxed">{stage.description}</p>
                     <ul className="space-y-2 mb-6">
                       {stage.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex text-sm text-dark-grey/70">
@@ -305,11 +305,11 @@ const Home = () => {
 
                         
                       ))}
-                    </ul>
-                    <div className="inline-flex items-center text-primary-orange hover:text-secondary-gold font-semibold group-hover:translate-x-2 transition-all duration-300">
+                    </ul> */}
+                    {/* <div className="inline-flex items-center text-primary-orange hover:text-secondary-gold font-semibold group-hover:translate-x-2 transition-all duration-300">
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -325,11 +325,11 @@ const Home = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-teal/20 to-program-green/20 rounded-2xl blur-3xl"></div>
               <img 
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" 
+                src="/images/g9.jpg" 
                 alt="Blue Economy"
                 className="relative rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
+              {/* <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
                 <div className="flex items-center space-x-2">
                   <Waves className="w-5 h-5 text-teal" />
                   <div>
@@ -337,7 +337,7 @@ const Home = () => {
                     <div className="text-xs text-dark-grey/60">Sustainable Ocean Use</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div>
               <div className="inline-flex items-center px-3 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-4">
@@ -377,22 +377,22 @@ const Home = () => {
               <p className="text-lg text-dark-grey/70 mb-8 leading-relaxed">
                 BlueBiz focuses on specific value chains which include: mariculture, aquaculture, plastic waste management, mangrove restoration and apiculture, coconut value addition, ecotourism and land-based farming - cashew nuts, cassava and coconuts.
               </p>
-              <Link
+              {/* <Link
                 to="/resources"
-                className="inline-flex items-center px-6 py-3 bg-program-green text-white font-semibold rounded-lg hover:bg-teal transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center  px-6 py-3 bg-program-green text-white font-semibold rounded-lg hover:bg-teal transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </Link> */}
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-program-green/20 to-teal/20 rounded-2xl blur-3xl"></div>
               <img 
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                src="/images/g3.jpg" 
                 alt="Resource Center"
                 className="relative rounded-2xl shadow-2xl"
               />
-              <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
+              {/* <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
                 <div className="flex items-center space-x-2">
                   <Target className="w-5 h-5 text-program-green" />
                   <div>
@@ -400,7 +400,7 @@ const Home = () => {
                     <div className="text-xs text-dark-grey/60">Free Access</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -438,11 +438,11 @@ const Home = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-orange/20 to-secondary-gold/20 rounded-2xl blur-3xl"></div>
               <img 
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg" 
+                src="/images/g6.jpg" 
                 alt="Entrepreneur Era"
                 className="relative rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
+              {/* <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-light-grey/50">
                 <div className="flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 text-primary-orange" />
                   <div>
@@ -450,7 +450,7 @@ const Home = () => {
                     <div className="text-xs text-dark-grey/60">Empowered</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div>
               <div className="inline-flex items-center px-3 py-1 bg-primary-orange/10 text-primary-orange rounded-full text-sm font-medium mb-4">
@@ -613,17 +613,17 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              <Link
+              {/* <Link
                 to="/finance"
                 className="inline-flex items-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Funding Options
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </Link> */}
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                src="/images/g11.jpg" 
                 alt="Business meeting"
                 className="rounded-lg shadow-xl"
               />

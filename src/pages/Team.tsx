@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, MapPin, Award, Users, Target, Sparkles, Globe } from 'lucide-react';
+import TeamMembersSection from '../components/TeamMembersSection';
 
 const Team = () => {
   const teamMembers = [
@@ -222,7 +223,7 @@ const Team = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/g6.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 
@@ -276,127 +277,9 @@ const Team = () => {
       </section>
 
       {/* Team Members */}
-      <section className="py-20 bg-gradient-to-br from-light-grey to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 bg-primary-orange/10 text-primary-orange rounded-full text-sm font-medium mb-4">
-              <Target className="w-4 h-4 mr-2" />
-              Core Team
-            </div>
-            <h2 className="text-4xl font-bold text-dark-grey mb-4">Meet Our Team</h2>
-            <p className="text-xl text-dark-grey/70">Experienced professionals dedicated to your entrepreneurial success</p>
-          </div>
+      <TeamMembersSection />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-light-grey/50 overflow-hidden">
-                  {/* Profile Image */}
-                  <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center text-white text-sm">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {member.location}
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-dark-grey mb-1 group-hover:text-primary-orange transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-primary-orange font-medium mb-3">{member.position}</p>
-                    <p className="text-dark-grey/70 text-sm mb-4 leading-relaxed">{member.bio}</p>
-
-                    {/* Expertise Tags */}
-                    <div className="mb-4">
-                      <div className="text-xs font-semibold text-dark-grey mb-2">Expertise:</div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.slice(0, 2).map((skill, skillIndex) => (
-                          <span key={skillIndex} className="px-2 py-1 bg-light-grey text-dark-grey text-xs rounded-full">
-                            {skill}
-                          </span>
-                        ))}
-                        {member.expertise.length > 2 && (
-                          <span className="px-2 py-1 bg-primary-orange/10 text-primary-orange text-xs rounded-full">
-                            +{member.expertise.length - 2} more
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Achievements */}
-                    <div className="mb-4">
-                      <div className="text-xs font-semibold text-dark-grey mb-2">Key Achievements:</div>
-                      <ul className="space-y-1">
-                        {member.achievements.slice(0, 2).map((achievement, achIndex) => (
-                          <li key={achIndex} className="text-xs text-dark-grey/70 flex items-center">
-                            <Award className="w-3 h-3 mr-2 text-green flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="flex items-center justify-between pt-4 border-t border-light-grey">
-                      <a 
-                        href={`mailto:${member.email}`}
-                        className="flex items-center text-primary-orange hover:text-secondary-gold transition-colors text-sm"
-                      >
-                        <Mail className="w-4 h-4 mr-2" />
-                        Contact
-                      </a>
-                      <div className="flex space-x-2">
-                        <div className="w-8 h-8 bg-light-grey rounded-full flex items-center justify-center hover:bg-primary-orange hover:text-white transition-colors cursor-pointer">
-                          <Linkedin className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advisory Board */}
-      <section className="py-20 bg-white hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
-              <Globe className="w-4 h-4 mr-2" />
-              Advisory Board
-            </div>
-            <h2 className="text-4xl font-bold text-dark-grey mb-4">Strategic Advisors</h2>
-            <p className="text-xl text-dark-grey/70">Expert guidance from industry leaders and academic institutions</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {advisors.map((advisor, index) => (
-              <div key={index} className="group">
-                <div className="bg-gradient-to-br from-light-grey to-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-light-grey/50">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-orange to-secondary-gold rounded-2xl flex items-center justify-center text-white mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-lg font-bold text-dark-grey mb-2 group-hover:text-primary-orange transition-colors">
-                    {advisor.name}
-                  </h3>
-                  <p className="text-primary-orange font-medium mb-3 text-sm">{advisor.position}</p>
-                  <p className="text-dark-grey/70 text-sm">{advisor.expertise}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team Values */}
       <section className="py-20 bg-gradient-to-br from-light-grey to-white">

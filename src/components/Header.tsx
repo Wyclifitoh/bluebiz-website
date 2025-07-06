@@ -92,7 +92,7 @@ const Header = () => {
                 // Homepage not scrolled - logo with white background container
                 <div className="bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-white/20 group-hover:bg-white group-hover:shadow-xl transition-all duration-300">
                   <img
-                    src="/images/logo.png"
+                    src="/images/tns-logo.png"
                     alt="BlueBiz Kenya Logo"
                     className="h-10 sm:h-12 object-contain transition-all duration-300 group-hover:scale-105"
                   />
@@ -101,7 +101,7 @@ const Header = () => {
                 // Other pages or homepage scrolled - regular logo
                 <div className="group-hover:scale-105 transition-transform duration-300">
                   <img
-                    src="/images/logo.png"
+                    src="/images/tns-logo.png"
                     alt="BlueBiz Kenya Logo"
                     className="h-10 sm:h-12 md:h-14 object-contain"
                   />

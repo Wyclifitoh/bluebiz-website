@@ -19,7 +19,7 @@ import {
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const categories = [
     { id: 'all', name: 'All Questions', count: 25 },
@@ -230,7 +230,7 @@ const FAQ = () => {
 
   const featuredFAQs = faqs.filter(faq => faq.featured);
 
-  const toggleFAQ = (id) => {
+  const toggleFAQ = (id: number) => {
     setOpenFAQ(openFAQ === id ? null : id);
   };
 
@@ -240,7 +240,7 @@ const FAQ = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/g2.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 

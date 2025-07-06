@@ -13,10 +13,12 @@ import Team from './pages/Team';
 import ResourceCenter from './pages/ResourceCenter';
 import Guides from './pages/Guides';
 import FAQ from './pages/FAQ';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <main>

@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
 import { CheckCircle, AlertCircle, Loader, Users, Target, BookOpen, TrendingUp, Sparkles, Award, Shield } from 'lucide-react';
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  county: string;
+  businessStage: string;
+  businessType: string;
+  interests: string[];
+}
+
 const JoinUs = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     email: '',
@@ -55,7 +66,7 @@ const JoinUs = () => {
     'Export Opportunities'
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -63,7 +74,7 @@ const JoinUs = () => {
     }));
   };
 
-  const handleInterestChange = (interest) => {
+  const handleInterestChange = (interest: string) => {
     setFormData(prev => ({
       ...prev,
       interests: prev.interests.includes(interest)
@@ -72,7 +83,7 @@ const JoinUs = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: '', message: '' });
@@ -126,7 +137,7 @@ const JoinUs = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/g11.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 

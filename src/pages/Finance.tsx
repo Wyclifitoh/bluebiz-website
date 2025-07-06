@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import InvestorTypesSection from '../components/InvestorTypesSection';
+
 import { 
   Users, 
   Building, 
@@ -139,7 +141,7 @@ const Finance = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/g9.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 
@@ -196,56 +198,15 @@ const Finance = () => {
 
       {/* Investor Types */}
       <section className="py-20 bg-gradient-to-br from-light-grey to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 bg-primary-orange/10 text-primary-orange rounded-full text-sm font-medium mb-4">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Funding Options
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-4">Types of Funding Available</h2>
-            <p className="text-xl text-dark-grey/70 max-w-3xl mx-auto">
-              Explore different funding options based on your business stage, industry, and capital requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {investorTypes.map((type, index) => (
-              <div key={index} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-light-grey/50">
-                  <div className={`h-2 bg-gradient-to-r ${type.color} rounded-t-2xl`}></div>
-                  <div className="p-8">
-                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${type.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      {type.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-dark-grey mb-4 group-hover:text-primary-orange transition-colors">{type.title}</h3>
-                    <p className="text-dark-grey/70 mb-6 leading-relaxed">{type.description}</p>
-                    
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-dark-grey mb-3">Key Features:</h4>
-                      <ul className="space-y-3">
-                        {type.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm text-dark-grey/70">
-                            <CheckCircle className="h-4 w-4 text-green mr-3 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="border-t border-light-grey pt-4">
-                      <div className="text-sm font-medium text-dark-grey mb-1">Best Suited For:</div>
-                      <div className="text-sm text-dark-grey/70">{type.suitable}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+         <InvestorTypesSection />
       </section>
+{/* 
+      <div className="min-h-screen bg-white">
+      <InvestorTypesSection />
+    </div> */}
 
       {/* Funding Process */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
@@ -259,7 +220,7 @@ const Finance = () => {
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
+         
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-orange/20 via-secondary-gold/20 to-accent/20"></div>
 
             <div className="space-y-12">
@@ -280,7 +241,7 @@ const Finance = () => {
                     </div>
                   </div>
                   
-                  {/* Timeline dot */}
+                   
                   <div className="hidden md:block w-6 h-6 bg-gradient-to-br from-primary-orange to-secondary-gold rounded-full border-4 border-white shadow-lg z-10"></div>
                   
                   <div className="flex-1 md:w-1/2"></div>
@@ -289,10 +250,10 @@ const Finance = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-br from-light-grey to-white">
+ 
+      {/* <section className="py-20 bg-gradient-to-br from-light-grey to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-3 py-1 bg-green/10 text-green rounded-full text-sm font-medium mb-4">
@@ -331,7 +292,7 @@ const Finance = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20 bg-white">
