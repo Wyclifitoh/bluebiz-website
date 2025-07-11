@@ -141,7 +141,7 @@ const Finance = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('/images/g9.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/TNS_BLUE_BIZ_.JPG')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 
@@ -154,12 +154,7 @@ const Finance = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6 border border-white/20">
-              <Banknote className="w-4 h-4 mr-2 text-green" />
-              Funding Opportunities Available
-            </div>
+          <div className="max-w-4xl mx-auto"> 
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Access to <span className="bg-gradient-to-r from-green to-teal bg-clip-text text-transparent">Finance</span>
@@ -178,11 +173,11 @@ const Finance = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="mailto:nkoigu@tns.org"
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 backdrop-blur-sm border border-white/20"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                Challenge Fund Application
+                Contact Us
               </a>
             </div>
           </div>

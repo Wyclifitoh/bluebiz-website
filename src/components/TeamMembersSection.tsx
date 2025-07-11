@@ -7,7 +7,7 @@ import {
   Users,
   Star
 } from 'lucide-react';
-
+import { Link } from "react-router-dom";
 const teamMembers = [
   {
     name: "Biasha Oundo",
@@ -391,9 +391,13 @@ const TeamMembersSection = () => {
               <h3 className="text-2xl font-bold text-dark-grey mb-2">Ready to Connect?</h3>
               <p className="text-dark-grey/70">Reach out to any team member for personalized support.</p>
             </div>
-            <button className="bg-primary-orange text-white px-8 py-4 rounded-2xl font-semibold hover:bg-primary-orange/90 transition-all duration-300 hover:scale-105 shadow-lg">
-              Contact Team
-            </button>
+             
+             <Link
+                          to="/contact"
+                          className="bg-primary-orange text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-orange/90 transition-all duration-300 hover:scale-105 shadow-lg"
+                        >
+                          <span>Contact Team</span>
+                        </Link>
           </div>
         </div>
       </div>

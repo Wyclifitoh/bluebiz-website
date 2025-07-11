@@ -388,7 +388,7 @@ const Home = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-program-green/20 to-teal/20 rounded-2xl blur-3xl"></div>
               <img 
-                src="/images/g3.jpg" 
+                src="/images/Mangrove-Restoration-20250514.jpeg" 
                 alt="Resource Center"
                 className="relative rounded-2xl shadow-2xl"
               />
@@ -438,7 +438,7 @@ const Home = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-orange/20 to-secondary-gold/20 rounded-2xl blur-3xl"></div>
               <img 
-                src="/images/g6.jpg" 
+                src="/images/DSC_4977.JPG" 
                 alt="Entrepreneur Era"
                 className="relative rounded-2xl shadow-2xl"
               />
@@ -533,7 +533,7 @@ const Home = () => {
       </section>
 
       {/* BlueBiz Pillars Preview */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">
@@ -587,7 +587,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Access to Finance Preview */}
       <section className="py-20 bg-gradient-to-br from-light-grey to-white">
@@ -623,7 +623,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img 
-                src="/images/g11.jpg" 
+                src="/images/CopyofDSC_0045.jpg" 
                 alt="Business meeting"
                 className="rounded-lg shadow-xl"
               />

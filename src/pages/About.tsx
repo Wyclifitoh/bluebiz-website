@@ -23,6 +23,7 @@ import {
   ChevronLeft,
   Play
 } from "lucide-react";
+import GoogleMapsHeatmap from '../components/GoogleMapsHeatmap';
 
 const pillars = [
   {
@@ -126,10 +127,10 @@ const galleryMoments = [
     id: 1,
     title: "Skills Development Workshop",
     description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
-    image: "/images/g1.jpg",
+    image: "/images/about-bluebiz.JPG",
     category: "Training",
     date: "March 2024"
-  },
+  }, 
   {
     id: 2,
     title: "Networking Event",
@@ -209,7 +210,71 @@ const galleryMoments = [
     image: "/images/g11.jpg",
     category: "Technology",
     date: "April 2024"
-  }
+  },
+  {
+    id: 12,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/g1.jpg",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 13,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/CopyofDSC_0045.jpg",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 14,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/DSC_4977.JPG",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 15,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/DSC_5017.JPG",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 16,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/Eco-tourism.jpeg",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 17,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/Environment-Conservation.jpg",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 18,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/IMG-202505014-WA0018.jpg",
+    category: "Training",
+    date: "March 2024"
+  },
+  {
+    id: 19,
+    title: "Skills Development Workshop",
+    description: "Young entrepreneurs learning business management and financial literacy skills in our comprehensive training program.",
+    image: "/images/IMG-202505014-WA0019.jpg",
+    category: "Training",
+    date: "March 2024"
+  },
 ];
 
  const stats = [
@@ -391,7 +456,7 @@ const About = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('/images/g11.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/about-bluebiz.JPG')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 
@@ -471,7 +536,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-orange/20 to-secondary-gold/20 blur-3xl pointer-events-none"></div>
               <img
-                src="/images/about.jpg"
+                src="/images/about-bluebiz.JPG"
                 alt="Young entrepreneurs working together"
                 className="relative z-10 rounded-2xl shadow-2xl"
               />
@@ -505,128 +570,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-     
-       {/* Coastal Counties Impact Section */}
-      {/* <section className="py-20 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden">
-        
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-teal to-teal-500 text-white rounded-full text-sm font-medium mb-6 shadow-lg">
-              <MapPin className="w-4 h-4 mr-2" />
-              Regional Impact
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Coastal <span className="text-transparent bg-clip-text bg-teal">Counties We Serve</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Tailored support for each county's unique opportunities and challenges, creating sustainable economic growth across Kenya's coastal region
-            </p>
-          </div>
- 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {impactAreas.map((area, index) => {
-              const Icon = area.icon;
-              const isHovered = hoveredCounty === index;
-              
-              return (
-                <div
-                  key={index}
-                  className="group relative"
-                  onMouseEnter={() => setHoveredCounty(index)}
-                  onMouseLeave={() => setHoveredCounty(null)}
-                >
-                  
-                  <div className={`absolute inset-0 bg-gradient-to-r ${area.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-all duration-500 scale-105`} />
-              
-                  <div className={`relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:scale-105 ${area.bgColor} group-hover:border-transparent`}>
-                  
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${area.color} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                        <Icon className="w-8 h-8" />
-                      </div>
-                      
-                 
-                      <div className="text-right">
-                        <div className="flex items-center text-emerald-600 mb-1">
-                          <TrendingUp className="w-4 h-4 mr-1" />
-                          <span className="text-sm font-bold">{area.growth}</span>
-                        </div>
-                        <div className="text-xs text-slate-500">Growth Rate</div>
-                      </div>
-                    </div>
-
-                    
-                    <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 transition-all duration-300">
-                      {area.title}
-                    </h3>
-
-                  
-                    <p className="text-slate-600 mb-6 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-                      {area.description}
-                    </p>
- 
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-   
-          <div className="bg-program-green rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-                Collective Regional Impact
-              </h3>
-              <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Together, these six coastal counties represent the heart of Kenya's Blue Economy transformation
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {impactAreas.reduce((sum, area) => sum + area.businesses, 0)}
-                </div>
-                <div className="text-white-300 font-medium">Total Businesses</div>
-                <div className="w-12 h-1 bg-blue-400 rounded-full mx-auto mt-2" />
-              </div>
-              
-              <div className="text-center group">
-                <div className="text-4xl lg:text-5xl font-bold text-white-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  6
-                </div>
-                <div className="text-white-300 font-medium">Counties Served</div>
-                <div className="w-12 h-1 bg-emerald-400 rounded-full mx-auto mt-2" />
-              </div>
-              
-              <div className="text-center group">
-                <div className="text-4xl lg:text-5xl font-bold text-white-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  2.5K+
-                </div>
-                <div className="text-white-300 font-medium">Jobs Created</div>
-                <div className="w-12 h-1 bg-purple-400 rounded-full mx-auto mt-2" />
-              </div>
-              
-              <div className="text-center group">
-                <div className="text-4xl lg:text-5xl font-bold text-white-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  85%
-                </div>
-                <div className="text-white-300 font-medium">Success Rate</div>
-                <div className="w-12 h-1 bg-orange-400 rounded-full mx-auto mt-2" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
@@ -787,6 +730,13 @@ const About = () => {
 
       {/* BlueBiz Moments Gallery */}
       <section className="py-20 bg-gradient-to-br from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-dark-grey mb-4">Counties We Serve</h2>
+            <p className="text-lg text-dark-grey/70">Tailored support for each county's unique opportunities and challenges, creating sustainable economic growth across Kenya's coastal region</p>
+          </div>
+          <GoogleMapsHeatmap />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-teal to-pink-500 text-white rounded-full text-sm font-medium mb-6 shadow-lg">

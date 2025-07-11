@@ -221,7 +221,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{ icon: Phone, text: "Get In Touch" }}
@@ -263,7 +263,7 @@ const ContactPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Interactive Map Section */}
       <section className="py-20 bg-light-grey/30">
@@ -274,88 +274,8 @@ const ContactPage = () => {
             subtitle="Explore our presence across the coastal counties and discover the value chains we support in each region"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Interactive Kenya Map */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-6 shadow-xl border border-light-grey/50">
-                <h3 className="text-xl font-bold text-dark-grey mb-4 text-center">Coastal Counties Coverage</h3>
-                
-                {/* Simplified Kenya Map */}
-                <div className="relative w-full h-96 bg-gradient-to-br from-teal/10 to-program-green/10 rounded-xl overflow-hidden">
-                  {/* Kenya outline - simplified coastal focus */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300">
-                    {/* Simplified Kenya coastal outline */}
-                    <path
-                      d="M280 50 L350 80 L370 120 L360 160 L340 200 L320 240 L300 260 L280 250 L260 230 L250 200 L240 170 L250 140 L260 110 L270 80 Z"
-                      fill="rgba(79, 205, 176, 0.1)"
-                      stroke="rgba(79, 205, 176, 0.3)"
-                      strokeWidth="2"
-                    />
-                    {/* Ocean area */}
-                    <path
-                      d="M350 80 L400 100 L400 300 L300 300 L320 240 L340 200 L360 160 L370 120 Z"
-                      fill="rgba(79, 205, 176, 0.05)"
-                    />
-                  </svg>
-
-                  {/* County markers */}
-                  {coastalCounties.map((county, index) => (
-                    <div
-                      key={county.name}
-                      className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                      style={{ top: county.position.top, left: county.position.left }}
-                    >
-                      {/* County marker */}
-                      <div className={`w-4 h-4 bg-${county.color} rounded-full shadow-lg group-hover:scale-150 transition-all duration-300 animate-pulse`}></div>
-                      
-                      {/* Office indicator */}
-                      {county.office && (
-                        <div className={`absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full`}></div>
-                      )}
-
-                      {/* Tooltip */}
-                      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                        <div className="bg-white rounded-lg shadow-xl p-3 min-w-48 border border-light-grey/50">
-                          <h4 className="font-bold text-dark-grey mb-2">{county.name} County</h4>
-                          <div className="text-xs text-dark-grey/70 mb-2">
-                            {county.office ? '🏢 Office Location' : '📍 Service Area'}
-                          </div>
-                          <div className="text-xs">
-                            <div className="font-medium text-dark-grey mb-1">Value Chains:</div>
-                            {county.valueChains.map((chain, i) => (
-                              <div key={i} className={`inline-block px-2 py-1 bg-${county.color}/10 text-${county.color} rounded-full text-xs mr-1 mb-1`}>
-                                {chain}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Map Legend */}
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-primary-orange rounded-full"></div>
-                    <span className="text-xs text-dark-grey/70">Office Location</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-teal rounded-full"></div>
-                    <span className="text-xs text-dark-grey/70">Service Area</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-xs text-dark-grey/70">Main Office</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-1 bg-program-green/30"></div>
-                    <span className="text-xs text-dark-grey/70">Coastal Region</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-start">
+        
             {/* Office Locations & Google Map */}
             <div className="space-y-6">
               <div>
@@ -370,7 +290,7 @@ const ContactPage = () => {
                     <div className="flex-1">
                       <h4 className="font-semibold text-dark-grey mb-2">Main Office - Mombasa</h4>
                       <p className="text-dark-grey/70 text-sm mb-3">Nyali Bridge Plaza, Mombasa County</p>
-                      <div className="flex flex-col space-y-1 text-sm">
+                      {/* <div className="flex flex-col space-y-1 text-sm">
                         <div className="flex items-center text-primary-orange">
                           <Phone className="w-4 h-4 mr-2" />
                           +254 706 815605
@@ -379,7 +299,7 @@ const ContactPage = () => {
                           <Mail className="w-4 h-4 mr-2" />
                           jmuchai@tns.org
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

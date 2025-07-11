@@ -1,84 +1,97 @@
-import React from 'react';
-import { 
-  Users, 
-  PiggyBank, 
-  Building2, 
-  Shield, 
-  Heart, 
+import React from "react";
+import {
+  Users,
+  PiggyBank,
+  Building2,
+  Shield,
+  Heart,
   TrendingUp,
   ArrowRight,
   Target,
-  Handshake
-} from 'lucide-react';
+  Handshake,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const investorTypes = [
   {
     title: "Family and Friends",
-    description: "This is often the first port of call for many small businesses seeking investment. Family and friends who believe in your business idea and trust your capabilities may be willing to provide financial support. This type of investment can be informal and flexible, with terms negotiated directly between the parties involved.",
+    description:
+      "This is often the first port of call for many small businesses seeking investment. Family and friends who believe in your business idea and trust your capabilities may be willing to provide financial support. This type of investment can be informal and flexible, with terms negotiated directly between the parties involved.",
     details: "",
     icon: Users,
     color: "bg-primary-orange",
     bgColor: "bg-primary-orange/5",
     borderColor: "border-primary-orange/20",
-    textColor: "text-primary-orange"
+    textColor: "text-primary-orange",
   },
   {
     title: "Chamas & Community Savings Groups",
-    description: "Chamas and Community Savings Groups offer a readily available and accessible financial resource for small business owners. The shared fund is used to provide loans or financial assistance to members, often with flexible terms and conditions compared to formal institutions. This flexibility makes them a good option for those with limited credit history. ",
+    description:
+      "Chamas and Community Savings Groups offer a readily available and accessible financial resource for small business owners. The shared fund is used to provide loans or financial assistance to members, often with flexible terms and conditions compared to formal institutions. This flexibility makes them a good option for those with limited credit history. ",
     details: "",
     icon: PiggyBank,
     color: "bg-teal",
     bgColor: "bg-teal/5",
     borderColor: "border-teal/20",
-    textColor: "text-teal"
+    textColor: "text-teal",
   },
   {
     title: "Microfinance Institutions (MFIs)",
-    description: " MFIs specialize in microloans, which are small loans specifically designed to boost your small business. They also offer financial literacy programs and training sessions to help you manage your money and grow your business. Many MFIs are all about community development and social empowerment, making them attractive to investors who want to make a positive impact while earning a return.",
+    description:
+      " MFIs specialize in microloans, which are small loans specifically designed to boost your small business. They also offer financial literacy programs and training sessions to help you manage your money and grow your business. Many MFIs are all about community development and social empowerment, making them attractive to investors who want to make a positive impact while earning a return.",
     details: "",
     icon: Building2,
     color: "bg-secondary-gold",
     bgColor: "bg-secondary-gold/5",
     borderColor: "border-secondary-gold/20",
-    textColor: "text-secondary-gold"
+    textColor: "text-secondary-gold",
   },
   {
     title: "Government Programs",
-    description: " Government programs offer financial aid like grants, loans, and subsidies. Plus, they hook you up with resources and training to level up your business skills. These programs are especially helpful for marginalized groups like youth, women, and local fishing communities.",
+    description:
+      " Government programs offer financial aid like grants, loans, and subsidies. Plus, they hook you up with resources and training to level up your business skills. These programs are especially helpful for marginalized groups like youth, women, and local fishing communities.",
     details: "",
     icon: Shield,
     color: "bg-program-green",
     bgColor: "bg-program-green/5",
     borderColor: "border-program-green/20",
-    textColor: "text-program-green"
+    textColor: "text-program-green",
   },
   {
     title: "NGOs & Development Partners",
-    description: " NGOs and Development Partners are organisations that are all about helping the community. They're super into supporting things like sustainable fishing practices, women's groups, fish farming, and youth-led businesses. The best part is, they often give out grants, which is basically free money that you don't have to pay back. ",
+    description:
+      " NGOs and Development Partners are organisations that are all about helping the community. They're super into supporting things like sustainable fishing practices, women's groups, fish farming, and youth-led businesses. The best part is, they often give out grants, which is basically free money that you don't have to pay back. ",
     details: "",
     icon: Heart,
     color: "bg-accent",
     bgColor: "bg-accent/5",
     borderColor: "border-accent/20",
-    textColor: "text-accent"
+    textColor: "text-accent",
   },
   {
     title: "Angel Investors",
-    description: " Angel Investors are individuals with a high net worth who provide financial backing to small startups and early-stage businesses, typically in exchange for ownership equity or convertible debt. They are considered high-risk investors as they invest in ventures that may not have a proven track record.",
+    description:
+      " Angel Investors are individuals with a high net worth who provide financial backing to small startups and early-stage businesses, typically in exchange for ownership equity or convertible debt. They are considered high-risk investors as they invest in ventures that may not have a proven track record.",
     details: "",
     icon: TrendingUp,
     color: "bg-yellow",
     bgColor: "bg-yellow/5",
     borderColor: "border-yellow/20",
-    textColor: "text-yellow"
-  }
+    textColor: "text-yellow",
+  },
 ];
 
-const InvestorCard = ({ investor, index }: { investor: typeof investorTypes[0]; index: number }) => {
+const InvestorCard = ({
+  investor,
+  index,
+}: {
+  investor: (typeof investorTypes)[0];
+  index: number;
+}) => {
   const IconComponent = investor.icon;
-  
+
   return (
-    <div 
+    <div
       className={`
         group relative overflow-hidden rounded-2xl ${investor.bgColor} ${investor.borderColor}
         border-2 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]
@@ -87,19 +100,23 @@ const InvestorCard = ({ investor, index }: { investor: typeof investorTypes[0]; 
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
+
       <div className="relative p-8">
         <div className="flex items-start gap-6 mb-6">
-          <div className={`
+          <div
+            className={`
             flex-shrink-0 p-4 rounded-2xl ${investor.color}
             shadow-lg group-hover:shadow-xl transition-all duration-300
             group-hover:scale-110 animate-float
-          `}>
+          `}
+          >
             <IconComponent className="w-8 h-8 text-white" />
           </div>
-          
+
           <div className="flex-1">
-            <h3 className={`text-2xl font-bold text-dark-grey mb-3 group-hover:${investor.textColor} transition-colors duration-300`}>
+            <h3
+              className={`text-2xl font-bold text-dark-grey mb-3 group-hover:${investor.textColor} transition-colors duration-300`}
+            >
               {investor.title}
             </h3>
             <p className="text-dark-grey/80 leading-relaxed">
@@ -107,13 +124,13 @@ const InvestorCard = ({ investor, index }: { investor: typeof investorTypes[0]; 
             </p>
           </div>
         </div>
-        
+
         <div className="mb-6">
           <p className="text-dark-grey/70 leading-relaxed">
             {investor.details}
           </p>
         </div>
-        
+
         {/* <div className="flex items-center justify-between">
           <div className={`flex items-center gap-2 ${investor.textColor} font-semibold group-hover:gap-4 transition-all duration-300`}>
             <span>Learn More</span>
@@ -144,12 +161,13 @@ const InvestorTypesSection = () => {
               Types of <span className="text-primary-orange">Investors</span>
             </h2>
           </div>
-          
+
           <p className="text-xl text-dark-grey/80 max-w-3xl mx-auto leading-relaxed mb-12 animate-slide-up">
-            Discover the perfect funding partner for your business journey. From family support to angel investors, 
-            each type offers unique advantages to help your venture thrive.
+            Discover the perfect funding partner for your business journey. From
+            family support to angel investors, each type offers unique
+            advantages to help your venture thrive.
           </p>
-          
+
           <div className="flex items-center justify-center gap-8 animate-fade-in">
             <div className="flex items-center gap-2">
               <Handshake className="w-5 h-5 text-primary-orange" />
@@ -165,14 +183,18 @@ const InvestorTypesSection = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Investor Types Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {investorTypes.map((investor, index) => (
-            <InvestorCard key={investor.title} investor={investor} index={index} />
+            <InvestorCard
+              key={investor.title}
+              investor={investor}
+              index={index}
+            />
           ))}
         </div>
-        
+
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-4 bg-white rounded-2xl p-8 shadow-xl border border-primary-orange/10">
@@ -180,13 +202,19 @@ const InvestorTypesSection = () => {
               <Handshake className="w-6 h-6 text-white" />
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-bold text-dark-grey mb-2">Ready to Connect?</h3>
-              <p className="text-dark-grey/70">Find the perfect investor match for your business needs.</p>
+              <h3 className="text-xl font-bold text-dark-grey mb-2">
+                Ready to Connect?
+              </h3>
+              <p className="text-dark-grey/70">
+                Find the perfect investor match for your business needs.
+              </p>
             </div>
-            
-            <button className="bg-primary-orange text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-orange/90 transition-all duration-300 hover:scale-105 shadow-lg">
-              Get Started
-            </button>
+            <Link
+              to="/contact"
+              className="bg-primary-orange text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-orange/90 transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <span>Get Started</span>
+            </Link>
           </div>
         </div>
       </div>

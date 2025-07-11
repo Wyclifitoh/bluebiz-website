@@ -286,7 +286,7 @@ return (
       {/* Modern Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow">
-          <div className="absolute inset-0 bg-[url('/images/g11.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/Participants-in-a-training-session.JPG')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dark-grey/50 to-transparent"></div>
         </div>
 
@@ -297,11 +297,7 @@ return (
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6 border border-white/20">
-              <GraduationCap className="w-4 h-4 mr-2 text-teal" />
-              Complete Learning Library
-            </div>
+          <div className="max-w-4xl mx-auto"> 
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Training <span className="bg-gradient-to-r from-teal to-program-green bg-clip-text text-transparent">Guides</span>
