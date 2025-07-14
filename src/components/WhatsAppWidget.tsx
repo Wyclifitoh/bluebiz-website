@@ -68,17 +68,17 @@ const WhatsAppWidget = () => {
                 </div>
                 <span className="font-medium">+254 706 815605</span>
               </div>
-              <div className="flex items-center text-sm text-gray-600 group">
+              {/* <div className="flex items-center text-sm text-gray-600 group">
                 <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">
                   <Mail className="w-4 h-4 text-primary-orange" />
                 </div>
                 <span className="font-medium">jmuchai@tns.org</span>
-              </div>
+              </div> */}
               <div className="flex items-center text-sm text-gray-600 group">
                 <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">
                   <MapPin className="w-4 h-4 text-primary-orange" />
                 </div>
-                <span className="font-medium">Coastal Counties, Kenya</span>
+                <span className="font-medium">Fidel Odinga Road | Texas Building 4th Floor Nyali, Mombasa, Kenya</span>
               </div>
               <div className="flex items-center text-sm text-gray-600 group">
                 <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">

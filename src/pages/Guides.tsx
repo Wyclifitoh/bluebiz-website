@@ -310,7 +310,7 @@ return (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
               {[
                 { number: "25+", label: "Resources" },
-                { number: "50K+", label: "Downloads" },
+                { number: "1K+", label: "Downloads" },
                 { number: "4.8", label: "Avg Rating" },
                 { number: "Free", label: "Access" }
               ].map((stat, index) => (
@@ -364,7 +364,7 @@ return (
       </section>
 
       {/* Video Guides Section */}
-      <section className="py-20 bg-white">
+      <section id="video-training-guide" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{ icon: Video, text: "Video Learning" }}
@@ -387,7 +387,7 @@ return (
       </section>
 
       {/* Training Modules Section */}
-      <section className="py-20 bg-light-grey/30">
+      <section id="training-module" className="py-20 bg-light-grey/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{ icon: BookOpen, text: "Training Modules" }}
@@ -409,7 +409,7 @@ return (
       </section>
 
       {/* Business Tools Section */}
-      <section className="py-20 bg-white">
+      <section  id="business-tools" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{ icon: FileDown, text: "Business Tools" }}
@@ -431,7 +431,7 @@ return (
       </section>
 
       {/* Learning Path Section */}
-      <section className="py-20 bg-gradient-to-br from-light-grey to-white">
+      <section id="learning-path"  className="py-20 bg-gradient-to-br from-light-grey to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{ icon: TrendingUp, text: "Learning Path" }}

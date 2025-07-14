@@ -140,7 +140,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-light-grey text-sm hover:text-white transition-colors group"
                 >
-                  <span className="block">Mombasa, Kilifi, Kwale, Lamu</span>
+                  <span className="block">Fidel Odinga Road | Texas Building 4th Floor Nyali, Mombasa, Kenya</span>
                   <ExternalLink className="w-3 h-3 ml-1 mt-1 inline opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
@@ -157,7 +157,7 @@ const Footer = () => {
               </div>
 
               {/* Email */}
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-teal flex-shrink-0" />
                 <a
                   href="mailto:info@tns.org"
@@ -165,7 +165,7 @@ const Footer = () => {
                 >
                   info@tns.org
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Social Links */}

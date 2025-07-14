@@ -21,214 +21,67 @@ const FAQ = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  const categories = [
-    { id: 'all', name: 'All Questions', count: 25 },
-    { id: 'general', name: 'General Information', count: 6 },
-    { id: 'joining', name: 'Joining BlueBiz', count: 5 },
-    { id: 'training', name: 'Training & Resources', count: 4 },
-    { id: 'funding', name: 'Access to Finance', count: 4 },
-    { id: 'business', name: 'Business Support', count: 3 },
-    { id: 'technical', name: 'Technical Support', count: 3 }
-  ];
+  // const categories = [
+  //   { id: 'all', name: 'All Questions', count: 25 },
+  //   { id: 'general', name: 'General Information', count: 6 },
+  //   { id: 'joining', name: 'Joining BlueBiz', count: 5 },
+  //   { id: 'training', name: 'Training & Resources', count: 4 },
+  //   { id: 'funding', name: 'Access to Finance', count: 4 },
+  //   { id: 'business', name: 'Business Support', count: 3 },
+  //   { id: 'technical', name: 'Technical Support', count: 3 }
+  // ];
 
   const faqs = [
-    // General Information
     {
       id: 1,
-      category: 'general',
-      question: 'What is BlueBiz Kenya?',
-      answer: 'BlueBiz Kenya is a comprehensive youth entrepreneurship program implemented by TechnoServe in partnership with the Mastercard Foundation. We focus on empowering young people aged 18-35 in Kenya\'s coastal counties to start and grow sustainable businesses that contribute to economic development and job creation.',
-      featured: true
+      question: 'What does BlueBiz aim to achieve?',
+      answer: ' BlueBiz seeks to empower youth and entrepreneurship in the blue economy by equipping them with the relevant skills, resources, and support to innovate sustainable businesses. This would be an economic venture in ocean-related sectors such as aquaculture, tourism, marine technology, and environmental conservation.'
     },
     {
       id: 2,
-      category: 'general',
-      question: 'Which counties does BlueBiz Kenya serve?',
-      answer: 'BlueBiz Kenya operates in six coastal counties: Mombasa, Kilifi, Kwale, Lamu, Taita-Taveta, and Tana River. We have local offices and representatives in each county to provide personalized support to entrepreneurs.',
-      featured: true
+      question: 'Who can be part of the program for BlueBiz?',
+      answer: ' We welcome applications by young entrepreneurs aged between 18 to 35, small-scale business owners, and innovators who want to create positive social impacts or economic or environmental impacts within the blue economy. We encourage participants from all different blue economy sectors and invite applicants with innovative solutions that respond to the challenges of ocean sustainability.'
     },
     {
       id: 3,
-      category: 'general',
-      question: 'What is the Blue Economy focus?',
-      answer: 'The Blue Economy refers to the sustainable use of ocean resources for economic growth, improved livelihoods, and jobs while preserving ocean ecosystem health. BlueBiz focuses on value chains including mariculture, aquaculture, plastic waste management, mangrove restoration, ecotourism, and coastal agriculture.',
-      featured: false
+      question: 'What type of training does BlueBiz offer?',
+      answer: 'BlueBiz gives holistic training in the basics of entrepreneurship, financial management, marketing, and digital skills, adapted to the needs of the blue economy. Other important aspects that our program covers are soft skills such as leadership, networking and communication, all put together in a well-rounded toolkit.'
     },
     {
       id: 4,
-      category: 'general',
-      question: 'Who are BlueBiz Kenya\'s partners?',
-      answer: 'BlueBiz Kenya is implemented by TechnoServe in partnership with the Mastercard Foundation. We also work with local financial institutions, government agencies, and private sector partners to provide comprehensive support to entrepreneurs.',
-      featured: false
+      question: 'How does BlueBiz support participants in developing their businesses?',
+      answer: 'BlueBiz offers entrepreneurship training, technical training, mentorship provided by sector experts, funding opportunities, and networking events. We connect participants with potential investors and market actors from the blue economy to help them grow and establish viable business models.'
     },
     {
-      id: 5,
-      category: 'general',
-      question: 'How long has BlueBiz Kenya been operating?',
-      answer: 'BlueBiz Kenya launched in 2019 and has been operating for over 5 years. During this time, we have empowered over 2,500 young entrepreneurs and supported the launch of 500+ businesses across the coastal region.',
-      featured: false
+      id: 5, 
+      question: 'Does BlueBiz have any networking opportunities?',
+      answer: 'Yes, networking is a very important aspect of the program. BlueBiz organizes events and links participants to value chain actors, industry professionals, and other entrepreneurs. Such a network supports the participants in getting a feel for the market and developing relationships that can be helpful to grow business.'
     },
     {
       id: 6,
-      category: 'general',
-      question: 'What makes BlueBiz Kenya different from other programs?',
-      answer: 'BlueBiz Kenya offers a holistic approach combining business development, financial literacy, skills training, and innovation support. Our focus on the blue economy, coastal-specific challenges, and comprehensive ecosystem approach sets us apart from other entrepreneurship programs.',
-      featured: false
-    },
-
-    // Joining BlueBiz
+      question: 'What is unique about the BlueBiz approach?',
+      answer: 'BlueBiz links entrepreneurship training with a focus on sustainability and the blue economy. Other business programs differ from the intent of BlueBiz in that it aims at the creation of businesses that balance profitability with environmental responsibility to have a positive impact both on local communities and marine ecosystems.'
+    }, 
     {
       id: 7,
-      category: 'joining',
-      question: 'Who can join BlueBiz Kenya?',
-      answer: 'Young entrepreneurs aged 18-35 living in Kenya\'s coastal counties (Mombasa, Kilifi, Kwale, Lamu, Taita-Taveta, and Tana River) who are interested in starting or growing a business. We welcome entrepreneurs at all stages, from those with just an idea to those with established businesses.',
-      featured: true
+      question: 'Is there a fee of any sort to participate in the BlueBiz program?',
+      answer: 'There are no participation costs to BlueBiz participants since they are fully sponsored by the partner organizations that ensure blue economy innovation is catalyzed through the program. Participants can have funding, resources, and training without necessarily having to pay for the same.'
     },
     {
       id: 8,
-      category: 'joining',
-      question: 'Is there a cost to join BlueBiz Kenya?',
-      answer: 'No, joining BlueBiz Kenya is completely free. All our programs, workshops, mentorship sessions, and resources are provided at no cost to participants. This is made possible through the generous support of our partners.',
-      featured: true
+      question: 'What are the expected outcomes for participants?',
+      answer: 'By the end of the program, participants are likely to have an improved foundation in entrepreneurship, a better-defined business model, and a well-defined actionable growth plan. They shall equally have wider networks in the blue economy, with an understanding of how to scale their ventures sustainably.'
     },
-    {
-      id: 9,
-      category: 'joining',
-      question: 'How do I apply to join BlueBiz Kenya?',
-      answer: 'You can apply by filling out our online registration form on the "Join Us" page. The application takes about 10-15 minutes to complete and asks about your personal information, business stage, and areas of interest.',
-      featured: false
-    },
-    {
-      id: 10,
-      category: 'joining',
-      question: 'How long does the application process take?',
-      answer: 'We review applications within 48 hours and will contact you for a welcome call within one week of your application. The entire onboarding process typically takes 1-2 weeks from application to program participation.',
-      featured: true
-    },
-    {
-      id: 11,
-      category: 'joining',
-      question: 'What happens after I join?',
-      answer: 'After joining, you\'ll receive a welcome call to discuss your goals and match you with appropriate programs. You\'ll then have access to training modules, mentorship sessions, networking events, and funding opportunities based on your needs and business stage.',
-      featured: false
-    },
-
-    // Training & Resources
-    {
-      id: 12,
-      category: 'training',
-      question: 'What types of training do you offer?',
-      answer: 'We offer comprehensive training including business plan development, financial literacy, digital marketing, customer service, leadership skills, and blue economy-specific training. Training is delivered through workshops, online modules, video content, and one-on-one mentorship.',
-      featured: false
-    },
-    {
-      id: 13,
-      category: 'training',
-      question: 'Are the training materials available online?',
-      answer: 'Yes, all our training materials are available online through our Resource Center and Guides pages. You can download PDF modules, watch video tutorials, and access interactive content 24/7 from any device.',
-      featured: false
-    },
-    {
-      id: 14,
-      category: 'training',
-      question: 'Do you provide certificates for completed training?',
-      answer: 'Yes, we provide certificates of completion for our training modules and workshops. These certificates can be valuable for your professional development and when applying for funding or partnerships.',
-      featured: false
-    },
-    {
-      id: 15,
-      category: 'training',
-      question: 'Can I access training if I\'m not physically in the coastal counties?',
-      answer: 'While our primary focus is on coastal counties, many of our online resources and virtual training sessions are accessible from anywhere. However, in-person workshops, mentorship, and some specialized support are limited to our target counties.',
-      featured: false
-    },
-
-    // Access to Finance
-    {
-      id: 16,
-      category: 'funding',
-      question: 'Do you provide direct funding to businesses?',
-      answer: 'We don\'t provide direct funding, but we connect you with investors, lenders, and grant opportunities. We also help you prepare strong applications, develop compelling pitches, and navigate the funding landscape through our Challenge Fund and partnership network.',
-      featured: true
-    },
-    {
-      id: 17,
-      category: 'funding',
-      question: 'What is the BlueBiz Challenge Fund?',
-      answer: 'The BlueBiz Challenge Fund is a competitive grant program that provides funding to promising entrepreneurs with innovative business ideas. Grants range from $1,000 to $25,000 depending on the business stage and potential impact.',
-      featured: false
-    },
-    {
-      id: 18,
-      category: 'funding',
-      question: 'What types of funding sources do you connect entrepreneurs with?',
-      answer: 'We connect entrepreneurs with various funding sources including angel investors, venture capital firms, microfinance institutions, government grants, crowdfunding platforms, and development finance institutions that focus on youth and coastal development.',
-      featured: false
-    },
-    {
-      id: 19,
-      category: 'funding',
-      question: 'How do you help with funding applications?',
-      answer: 'We provide comprehensive support including business plan review, financial projection development, pitch deck creation, application writing assistance, and mock interview sessions. Our team has extensive experience with various funding sources and requirements.',
-      featured: false
-    },
-
-    // Business Support
-    {
-      id: 20,
-      category: 'business',
-      question: 'What types of businesses do you support?',
-      answer: 'We support businesses across all sectors, with special focus on blue economy industries like fisheries, tourism, renewable energy, and coastal agriculture. We also support technology startups, manufacturing, services, and social enterprises.',
-      featured: false
-    },
-    {
-      id: 21,
-      category: 'business',
-      question: 'Do you provide ongoing mentorship?',
-      answer: 'Yes, we provide ongoing mentorship through our network of experienced entrepreneurs, industry experts, and business professionals. Mentorship can be one-on-one or group-based, depending on your needs and preferences.',
-      featured: false
-    },
-    {
-      id: 22,
-      category: 'business',
-      question: 'Can you help with business registration and legal requirements?',
-      answer: 'Yes, we provide guidance on business registration, licensing, tax requirements, and other legal aspects of starting and running a business in Kenya. We also connect you with legal professionals when specialized advice is needed.',
-      featured: false
-    },
-
-    // Technical Support
-    {
-      id: 23,
-      category: 'technical',
-      question: 'How can I contact BlueBiz Kenya for support?',
-      answer: 'You can contact us through multiple channels: email (jmuchai@tns.org), phone (+254 706 815605), our contact form, WhatsApp widget on our website, or visit our offices in Mombasa, Kilifi, Kwale, or Lamu.',
-      featured: false
-    },
-    {
-      id: 24,
-      category: 'technical',
-      question: 'What if I have technical issues with the website or online resources?',
-      answer: 'For technical issues, you can use our chatbot widget for immediate assistance, contact our support team via email, or call our technical support line. We typically respond to technical issues within 24 hours.',
-      featured: false
-    },
-    {
-      id: 25,
-      category: 'technical',
-      question: 'Do you have mobile apps for accessing BlueBiz resources?',
-      answer: 'Currently, all our resources are accessible through our mobile-optimized website. We are developing a mobile app that will be launched in 2024 to provide easier access to training materials and community features.',
-      featured: false
-    }
+   
   ];
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     
-    return matchesSearch && matchesCategory;
+    return matchesSearch;
   });
 
-  const featuredFAQs = faqs.filter(faq => faq.featured);
 
   const toggleFAQ = (id: number) => {
     setOpenFAQ(openFAQ === id ? null : id);
@@ -255,24 +108,23 @@ const FAQ = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6 border border-white/20">
+            {/* <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6 border border-white/20">
               <HelpCircle className="w-4 h-4 mr-2 text-teal" />
               Get Your Questions Answered
-            </div>
+            </div> */}
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Frequently Asked <span className="bg-gradient-to-r from-teal to-program-green bg-clip-text text-transparent">Questions</span>
-            </h1>
+            </h2>
             
             <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto">
               Find answers to common questions about BlueBiz Kenya, our programs, and how we can help you succeed as an entrepreneur.
             </p>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-10">
               {[
-                { number: "25+", label: "FAQs" },
-                { number: "6", label: "Categories" },
+                { number: "5+", label: "FAQs" },
                 { number: "<24h", label: "Response Time" },
                 { number: "24/7", label: "Support" }
               ].map((stat, index) => (
@@ -310,7 +162,7 @@ const FAQ = () => {
             </div>
 
             {/* Category Filter */}
-            <select
+            {/* <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 border border-light-grey rounded-xl focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200 bg-white"
@@ -320,49 +172,12 @@ const FAQ = () => {
                   {category.name} ({category.count})
                 </option>
               ))}
-            </select>
+            </select> */}
           </div>
         </div>
       </section>
 
-      {/* Featured FAQs */}
-      <section className="py-20 bg-gradient-to-br from-light-grey to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 bg-primary-orange/10 text-primary-orange rounded-full text-sm font-medium mb-4">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Most Asked Questions
-            </div>
-            <h2 className="text-4xl font-bold text-dark-grey mb-4">Popular FAQs</h2>
-            <p className="text-xl text-dark-grey/70">Quick answers to our most frequently asked questions</p>
-          </div>
-
-          <div className="space-y-4">
-            {featuredFAQs.map((faq, index) => (
-              <div key={faq.id} className="bg-white rounded-2xl shadow-lg border border-light-grey/50 overflow-hidden">
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-light-grey/50 transition-colors"
-                >
-                  <span className="text-lg font-semibold text-dark-grey pr-4">{faq.question}</span>
-                  {openFAQ === faq.id ? (
-                    <ChevronUp className="w-6 h-6 text-primary-orange flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-6 h-6 text-dark-grey/50 flex-shrink-0" />
-                  )}
-                </button>
-                {openFAQ === faq.id && (
-                  <div className="px-8 pb-6">
-                    <div className="border-t border-light-grey pt-4">
-                      <p className="text-dark-grey/70 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* All FAQs */}
       <section className="py-20 bg-white">
@@ -376,7 +191,7 @@ const FAQ = () => {
             <p className="text-xl text-dark-grey/70">
               {filteredFAQs.length} questions found
               {searchTerm && ` for "${searchTerm}"`}
-              {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+             
             </p>
           </div>
 
@@ -422,44 +237,6 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* FAQ Categories */}
-      <section className="py-20 bg-gradient-to-br from-light-grey to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-4">
-              <Target className="w-4 h-4 mr-2" />
-              Browse by Category
-            </div>
-            <h2 className="text-4xl font-bold text-dark-grey mb-4">FAQ Categories</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.slice(1).map((category, index) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className="group text-left"
-              >
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-light-grey/50">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-orange to-secondary-gold rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <HelpCircle className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-dark-grey mb-3 group-hover:text-primary-orange transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-dark-grey/70 text-sm mb-4">
-                    {category.count} questions available
-                  </p>
-                  <div className="flex items-center text-primary-orange text-sm font-medium">
-                    <span>View Questions</span>
-                    <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Still Have Questions */}
       <section className="py-20 bg-gradient-to-r from-primary-orange via-secondary-gold to-yellow text-white relative overflow-hidden">

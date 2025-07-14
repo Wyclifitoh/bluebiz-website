@@ -289,7 +289,7 @@ const ContactPage = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-dark-grey mb-2">Main Office - Mombasa</h4>
-                      <p className="text-dark-grey/70 text-sm mb-3">Nyali Bridge Plaza, Mombasa County</p>
+                      <p className="text-dark-grey/70 text-sm mb-3">TechnoServe Mombasa - Fidel Odinga Road | Texas Building 4th Floor Nyali</p>
                       {/* <div className="flex flex-col space-y-1 text-sm">
                         <div className="flex items-center text-primary-orange">
                           <Phone className="w-4 h-4 mr-2" />
@@ -302,21 +302,7 @@ const ContactPage = () => {
                       </div> */}
                     </div>
                   </div>
-                </div>
-
-                {/* Other Offices */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    { name: "Kilifi Office", address: "Bofa Road, Kilifi", color: "teal" },
-                    { name: "Kwale Office", address: "Ukunda Town, Kwale", color: "program-green" },
-                    { name: "Lamu Office", address: "Lamu Town Center", color: "secondary-gold" }
-                  ].map((office, index) => (
-                    <div key={index} className={`p-4 bg-${office.color}/5 border border-${office.color}/20 rounded-xl`}>
-                      <h5 className={`font-semibold text-${office.color} mb-1`}>{office.name}</h5>
-                      <p className="text-dark-grey/70 text-sm">{office.address}</p>
-                    </div>
-                  ))}
-                </div>
+                </div> 
               </div>
 
               {/* Embedded Google Map */}
@@ -464,31 +450,6 @@ const ContactPage = () => {
               </button>
             </div>
           </form>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-light-grey/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge={{ icon: Users, text: "Common Questions" }}
-            title="Frequently Asked Questions"
-            subtitle="Quick answers to common questions about BlueBiz Kenya"
-          />
-
-          <div className="space-y-6">
-            {faqItems.map((faq, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-light-grey/50">
-                <h3 className="text-lg font-semibold text-dark-grey mb-4 flex items-start">
-                  <div className="w-6 h-6 bg-primary-orange/10 rounded-lg flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-primary-orange text-sm font-bold">Q</span>
-                  </div>
-                  {faq.question}
-                </h3>
-                <p className="text-dark-grey/70 leading-relaxed ml-9">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

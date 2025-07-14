@@ -200,7 +200,7 @@ const ResourceCenter = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto pb-16">
               {[
                 { number: "45+", label: "Resources" },
-                { number: "15K+", label: "Downloads" },
+                { number: "1K+", label: "Downloads" },
                 { number: "4.8", label: "Avg Rating" },
                 { number: "Free", label: "Access" },
               ].map((stat, index) => (
@@ -335,7 +335,7 @@ const ResourceCenter = () => {
       </section>
 
       {/* Call for Partnerships */}
-      <section className="py-20 bg-white">
+      <section id="call-for-partnership" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-primary-orange via-secondary-gold to-yellow rounded-3xl p-8 lg:p-12 text-white text-center shadow-2xl relative overflow-hidden">
             {/* Background Pattern */}

@@ -34,7 +34,7 @@ const Home = () => {
       subtitle: "to Build Thriving Businesses",
       description: "Join BlueBiz Kenya and unlock your entrepreneurial potential with business support, financial literacy, and skills training designed for the blue economy.",
       ctaText: "Join Us Today",
-      ctaLink: "/join",
+      ctaLink: "/resources#call-for-partnership",
       secondaryCtaText: "Learn More",
       secondaryCtaLink: "/about",
       backgroundImage: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg",
@@ -95,6 +95,7 @@ const Home = () => {
       title: "Start Your Biz",
       description: "Turn your ideas into reality with comprehensive business planning support and startup guidance.",
       icon: <Zap className="h-8 w-8" />,
+      link: '/guides#video-training-guide',
       color: "from-program-green to-program-green",
       features: ["Business Plan Development", "Market Research", "Legal Registration", "Initial Funding Guidance"]
     },
@@ -102,6 +103,7 @@ const Home = () => {
       title: "Grow Your Biz",
       description: "Scale your existing business with advanced strategies and operational support.",
       icon: <TrendingUp className="h-8 w-8" />,
+       link: '/guides#business-tools',
       color: "from-primary-orange to-primary-orange",
       features: ["Growth Strategy", "Marketing & Sales", "Team Building", "Operations Optimization", "Financial Management"]
     },
@@ -109,6 +111,7 @@ const Home = () => {
       title: "Scale Your Biz",
       description: "Expand to new markets and achieve sustainable long-term growth.",
       icon: <Award className="h-8 w-8" />,
+       link: '/guides#learning-path',
       color: "from-program-green to-program-green",
       features: ["Market Expansion", "Investment Ready", "Strategic Partnerships", "Impact Measurement", "Sustainability Practices"]
     }
@@ -117,24 +120,25 @@ const Home = () => {
   const featuredFAQs = [
     {
       id: 1,
-      question: 'Who can join BlueBiz Kenya?',
-      answer: 'Young entrepreneurs aged 18-35 living in Kenya\'s coastal counties (Mombasa, Kilifi, Kwale, Lamu, Taita-Taveta, and Tana River) who are interested in starting or growing a business.'
+      question: 'What does BlueBiz aim to achieve?',
+      answer: ' BlueBiz seeks to empower youth and entrepreneurship in the blue economy by equipping them with the relevant skills, resources, and support to innovate sustainable businesses. This would be an economic venture in ocean-related sectors such as aquaculture, tourism, marine technology, and environmental conservation.'
     },
     {
       id: 2,
-      question: 'Is there a cost to join BlueBiz Kenya?',
-      answer: 'No, joining BlueBiz Kenya is completely free. All our programs, workshops, mentorship sessions, and resources are provided at no cost to participants.'
+      question: 'Who can be part of the program for BlueBiz?',
+      answer: ' We welcome applications by young entrepreneurs aged between 18 to 35, small-scale business owners, and innovators who want to create positive social impacts or economic or environmental impacts within the blue economy. We encourage participants from all different blue economy sectors and invite applicants with innovative solutions that respond to the challenges of ocean sustainability.'
     },
     {
       id: 3,
-      question: 'How long does the application process take?',
-      answer: 'We review applications within 48 hours and will contact you for a welcome call within one week of your application.'
+      question: 'What type of training does BlueBiz offer?',
+      answer: 'BlueBiz gives holistic training in the basics of entrepreneurship, financial management, marketing, and digital skills, adapted to the needs of the blue economy. Other important aspects that our program covers are soft skills such as leadership, networking and communication, all put together in a well-rounded toolkit.'
     },
     {
       id: 4,
-      question: 'Do you provide direct funding to businesses?',
-      answer: 'We don\'t provide direct funding, but we connect you with investors, lenders, and grant opportunities. We also help you prepare strong applications and develop compelling pitches.'
+      question: 'How does BlueBiz support participants in developing their businesses?',
+      answer: 'BlueBiz offers entrepreneurship training, technical training, mentorship provided by sector experts, funding opportunities, and networking events. We connect participants with potential investors and market actors from the blue economy to help them grow and establish viable business models.'
     }
+    
   ];
 
   useEffect(() => {
@@ -283,7 +287,7 @@ const Home = () => {
             {businessStages.map((stage, index) => (
               <Link
                 key={index}
-                to="/guides"
+                to={`${stage.link}`}
                 className="group cursor-pointer"
               >
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 border border-light-grey/50 overflow-hidden">

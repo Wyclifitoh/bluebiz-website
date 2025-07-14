@@ -326,7 +326,7 @@ const Team = () => {
       </section>
 
       {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary-orange via-secondary-gold to-yellow text-white relative overflow-hidden">
+      {/* <section className="py-20 bg-gradient-to-r from-primary-orange via-secondary-gold to-yellow text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-orange/50 to-secondary-gold/50"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float"></div>
@@ -355,7 +355,7 @@ const Team = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
