@@ -465,12 +465,12 @@ const ContactPage = () => {
             icon: Phone,
             variant: "primary"
           },
-          {
-            text: "Email: jmuchai@tns.org",
-            href: "mailto:jmuchai@tns.org",
-            icon: Mail,
-            variant: "secondary"
-          }
+          // {
+          //   text: "Email: jmuchai@tns.org",
+          //   href: "mailto:jmuchai@tns.org",
+          //   icon: Mail,
+          //   variant: "secondary"
+          // }
         ]}
       />
     </div>

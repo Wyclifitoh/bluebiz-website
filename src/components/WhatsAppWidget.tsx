@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Phone, Mail, MapPin, Clock, Zap } from 'lucide-react';
+import { MessageCircle, X, Phone, MapPin, Clock, Zap } from 'lucide-react';
 
 const WhatsAppWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +16,15 @@ const WhatsAppWidget = () => {
   };
 
   return (
-    <div className="fixed left-4 bottom-4 z-50">
-   
+    <div className="fixed left-4 bottom-4 z-50 pointer-events-none">
       {/* Widget Container */}
-      <div className={`transition-all duration-300 ease-in-out ${
-        isOpen ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-95 pointer-events-none'
-      }`}>
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          isOpen
+            ? 'translate-y-0 opacity-100 scale-100 pointer-events-auto'
+            : 'translate-y-4 opacity-0 scale-95 pointer-events-none'
+        }`}
+      >
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 w-80 mb-4 overflow-hidden backdrop-blur-lg bg-white/95">
           {/* Header with Gradient */}
           <div className="bg-gradient-to-r from-primary-orange via-secondary-gold to-yellow p-6 text-white relative overflow-hidden">
@@ -60,7 +63,7 @@ const WhatsAppWidget = () => {
               </p>
             </div>
 
-            {/* Contact Info with Icons */}
+            {/* Contact Info */}
             <div className="space-y-4 mb-6">
               <div className="flex items-center text-sm text-gray-600 group">
                 <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">
@@ -68,12 +71,6 @@ const WhatsAppWidget = () => {
                 </div>
                 <span className="font-medium">+254 706 815605</span>
               </div>
-              {/* <div className="flex items-center text-sm text-gray-600 group">
-                <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">
-                  <Mail className="w-4 h-4 text-primary-orange" />
-                </div>
-                <span className="font-medium">jmuchai@tns.org</span>
-              </div> */}
               <div className="flex items-center text-sm text-gray-600 group">
                 <div className="w-8 h-8 bg-primary-orange/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-orange/20 transition-colors">
                   <MapPin className="w-4 h-4 text-primary-orange" />
@@ -88,7 +85,7 @@ const WhatsAppWidget = () => {
               </div>
             </div>
 
-            {/* WhatsApp Button */}
+            {/* WhatsApp CTA Button */}
             <button
               onClick={openWhatsApp}
               className="w-full bg-gradient-to-r from-teal to-program-green text-white py-4 px-6 rounded-2xl font-bold hover:from-program-green hover:to-teal transition-all duration-300 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden group"
@@ -97,35 +94,20 @@ const WhatsAppWidget = () => {
               <MessageCircle className="w-6 h-6 animate-bounce" />
               <span className="text-lg">Chat on WhatsApp</span>
             </button>
-
-            {/* Quick Actions */}
-            {/* <div className="mt-4 grid grid-cols-2 gap-3">
-              <button className="text-sm bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 py-3 px-4 rounded-xl hover:from-primary-orange/10 hover:to-secondary-gold/10 hover:text-primary-orange transition-all duration-300 font-semibold hover:shadow-md transform hover:scale-105">
-                Program Info
-              </button>
-              <button className="text-sm bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 py-3 px-4 rounded-xl hover:from-primary-orange/10 hover:to-secondary-gold/10 hover:text-primary-orange transition-all duration-300 font-semibold hover:shadow-md transform hover:scale-105">
-                Application Help
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
 
-      {/* Toggle Button with Blinking Effect */}
+      {/* Floating Chat Button */}
       <button
         onClick={toggleWidget}
-        className={`relative w-16 h-16 bg-gradient-to-r from-primary-orange to-secondary-gold text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group overflow-hidden ${
+        className={`pointer-events-auto relative w-16 h-16 bg-gradient-to-r from-primary-orange to-secondary-gold text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group overflow-hidden ${
           isOpen ? 'rotate-0' : 'hover:scale-110 animate-pulse-glow'
         }`}
       >
-        {/* Blinking ring animation */}
         <div className="absolute inset-0 rounded-full bg-primary-orange animate-ping opacity-75"></div>
         <div className="absolute inset-1 rounded-full bg-secondary-gold animate-ping opacity-50 animation-delay-200"></div>
-        
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-orange via-secondary-gold to-yellow rounded-full"></div>
-        
-        {/* Icon */}
         <div className="relative z-10">
           {isOpen ? (
             <X className="w-7 h-7 text-white" />
@@ -133,8 +115,6 @@ const WhatsAppWidget = () => {
             <MessageCircle className="w-7 h-7 text-white group-hover:scale-110 transition-transform animate-bounce-gentle" />
           )}
         </div>
-
-        {/* Notification badge */}
         {!isOpen && (
           <div className="absolute -top-1 -right-1 w-5 h-5 bg-accent rounded-full flex items-center justify-center animate-pulse">
             <span className="text-white text-xs font-bold">!</span>

@@ -81,13 +81,14 @@ const Home = () => {
       quote: "Through BlueBiz, I learned proper business planning and secured funding to expand my seafood business. Now I employ 15 people!",
       rating: 5
     },
-    {
-      name: "Fatuma Ali",
-      business: "Pwani Fashion",
-      location: "Lamu",
-      quote: "The digital marketing training opened new markets for my fashion designs. My online sales have increased by 300%.",
-      rating: 5
-    }
+   {
+  name: "Fatuma Ali",
+  business: "Pwani Fashion",
+  location: "Lamu",
+  quote: "Through the digital training, I discovered how to position my coastal fashion brand within Kenya's Blue Economy. My reach has grown, and online orders have tripled.",
+  rating: 5
+}
+
   ];
 
   const businessStages = [
