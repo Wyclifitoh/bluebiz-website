@@ -244,15 +244,36 @@ return (
       {selectedVideo && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
-            <div className="flex items-center justify-between p-6 border-b border-light-grey">
-              <h3 className="text-xl font-bold text-dark-grey">{selectedVideo.title}</h3>
-              <button
-                onClick={closeVideoModal}
-                className="p-2 hover:bg-light-grey rounded-xl transition-colors"
-              >
-                <X className="w-6 h-6 text-dark-grey" />
-              </button>
-            </div>
+            <div className="p-6 border-b border-light-grey">
+  <div className="flex items-center justify-between">
+    <h3 className="text-xl font-bold text-dark-grey">{selectedVideo.title}</h3>
+    <button
+      onClick={closeVideoModal}
+      className="p-2 hover:bg-light-grey rounded-xl transition-colors"
+    >
+      <X className="w-6 h-6 text-dark-grey" />
+    </button>
+  </div>
+  
+  {selectedVideo.id === 1 && (
+    <p className="text-sm text-gray-500 mt-1">
+      Video by{" "}
+      <a
+        href="https://www.youtube.com/@startingabusinessinkenya"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline"
+      >
+        Starting a Business in Kenya
+      </a>{" "}
+      on YouTube.
+    </p>
+  )}
+</div>
+
+
+            
+            
             <div className="aspect-video">
               <iframe
                 src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
@@ -265,19 +286,8 @@ return (
             </div>
             <div className="p-6">
               <p className="text-dark-grey/70 mb-4">{selectedVideo.description}</p>
-              {selectedVideo.chapters && (
-                <div>
-                  <h4 className="font-semibold text-dark-grey mb-2">Video Chapters:</h4>
-                  <ul className="space-y-1">
-                    {selectedVideo.chapters.map((chapter: string, index: number) => (
-                      <li key={index} className="text-sm text-dark-grey/70 flex items-center">
-                        <Play className="w-3 h-3 mr-2 text-accent" />
-                        {chapter}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              
+              
             </div>
           </div>
         </div>
