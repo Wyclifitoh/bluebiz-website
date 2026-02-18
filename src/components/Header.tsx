@@ -31,6 +31,7 @@ const Header = () => {
         { name: 'FAQ', href: '/faq' },
       ]
     },
+     { name: 'Stories & Insights', href: '/stories' },
     { name: 'Contact', href: '/contact' },
   ];
 
